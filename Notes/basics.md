@@ -5,7 +5,8 @@
 ## #PHP_LFI 
 ---
 ---
-# PHP	
+# PHP	Basics 
+## you can download [this](images/php_basics.html) mind map and explore it  
 ---
 ---
 ## Basics Syntax
@@ -18,7 +19,7 @@
 ##### `$array_name = array('key' ⇒ 'value'); echo $array_name['key'];` like the dictionary in python
 
 #### 3-Multidimensional arrays
-##### `$arr = array(array('bla', 'bla', 'bla'));`2D array 
+##### `$arr = array(array('bla', 'bla', 'bla'));` 2D array 
 ---
 ---
 ### Print all the array 
