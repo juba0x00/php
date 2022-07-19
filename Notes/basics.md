@@ -90,21 +90,21 @@ foreach($students_and_grades as $student_name => $student_grade){
 
 #### **`$GLOBALS`**  → `$GLOBALS['$_POST', '$_GET']`;
 
-#### **`$_POST `** or ``$GLOBALS['_POST']`
+#### **`$_POST `** or `$GLOBALS['_POST']`
 
-####  **`$_GET `** or  ``$GLOBALS['_GET']`
+####  **`$_GET `** or `$GLOBALS['_GET']`
 
-#### **`$_COOKIE `** or  ``$GLOBALS['_COOKIE']`
+#### **`$_COOKIE `** or  `$GLOBALS['_COOKIE']`
 
-#### **`$_SESSION`** or  ``$GLOBALS['_SESSION']`
+#### **`$_SESSION`** or  `$GLOBALS['_SESSION']`
 
-#### **`$_SERVER`** or  ``$GLOBALS['_SERVER']`
+#### **`$_SERVER`** or  `$GLOBALS['_SERVER']`
 
-#### **`$_FILES`** or  ``$GLOBALS['_FILES']`
+#### **`$_FILES`** or  `$GLOBALS['_FILES']`
 
-#### **`$_REQUEST`** or  ``$GLOBALS['_REQUEST']`
+#### **`$_REQUEST`** or  `$GLOBALS['_REQUEST']`
 
-#### **`$_ENV`** or  ``$GLOBALS['_ENV']`
+#### **`$_ENV`** or  `$GLOBALS['_ENV']`
 
 ![SuperGlobals](images/SuperGlobals.png)
 
