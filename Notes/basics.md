@@ -6,7 +6,7 @@
 ---
 ---
 # PHP	Basics 
-## you can download [this](images/php_basics.html) mind map and explore it  
+## you can download [this](https://raw.githubusercontent.com/juba0x00/php/main/Notes/php_basics.html?token=GHSAT0AAAAAABWETMSSQ7GSWSHQ5HF2RNYGYWVGDPQ) mind map and explore it  
 ---
 ---
 ## Basics Syntax
