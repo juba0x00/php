@@ -31,8 +31,8 @@
 ###### `foreach($students_and_grades as $student_name => $student_grade){echo "what you want!";}`
 
 - Example
+
 ```php
-<?php
 
 // printing Indexed array print_r() and foreach()
 
@@ -62,7 +62,6 @@ foreach($students_and_grades as $student_name => $student_grade){
 	echo "$student_name's grade is $student_grade \n";
 }
 
-?>
 ```
 
 ![Print all the array](images/PallArray.png)
