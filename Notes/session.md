@@ -7,6 +7,7 @@
 - [[#Get PHP session values|Get PHP session values]]
 - [[#Remove all session variables|Remove all session variables]]
 - [[#Destroy the session|Destroy the session]]
+
 ---
 ## What is a PHP Session?
 - A session is a way to store information (in variables) to be used across multiple pages.Unlike a cookie, the information is not stored on the users computer.
@@ -21,6 +22,7 @@
 ```php
 session_start();  
 ```
+
 - A session is started with the `session_start()` function.  Session variables are set with the PHP global variable: $_SESSION.
 
 > Note The `session_start()` function must be the very first thing in your document. Before any HTML tags.
