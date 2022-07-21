@@ -1,7 +1,5 @@
 # Table Of Contents: 
-
 - [[#Basics Syntax|Basics Syntax]]
-	- [[#Basics Syntax#<mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># comment</mark>|<mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># comment</mark>]]
 	- [[#Basics Syntax#Array|Array]]
 		- [[#Array#1-Indexed Array|1-Indexed Array]]
 			- [[#1-Indexed Array#`$array_name = array(value, value, ..);`|`$array_name = array(value, value, ..);`]]
@@ -81,7 +79,7 @@
 
 ----
 ----
-# Tags
+# Tags <a name ='tags'></a>
 ## #PHP_important
 ## #PHP_security
 ## #PHP_basics_end
