@@ -37,11 +37,13 @@ $name = object -> get_name(); // like: name = object.get_name()
 - we will use MySQLi object oriented 
 ---
 ## Connect to Database (MySQLi Object-Oriented)
+
 ### `new mysqli` 
 ```php
 $connection = new mysqli('servername', 'admin name', 'admin password', 'database name');
 ```
 #### `sqli` stands for SQL Improved not SQL injection 😄
+
 ---
 ## Check connection errors
 ###  1- `if($con)`
@@ -53,6 +55,7 @@ else{
 	echo "Database Connection Error :(";
 }
 ```
+
 ###  2- `if (mysqli_connect_errno())` 
 ```php
 if (mysqli_connect_errno()) { // errno -> error Number (0 if no errors)
@@ -60,15 +63,16 @@ if (mysqli_connect_errno()) { // errno -> error Number (0 if no errors)
   exit();
 }
 ```
+
 ### 3- `if($con -> connect_error`
 ```php
 if ($con -> connect_error) {  
   die("Connection failed: " . $conn->connect_error);  
 }
-
 ```
 ---
 ## Query the Database 
+
 ### 1- `mysqli_query()`
 ```php
 $result = mysqli_query($connection, $sql_query)
@@ -79,9 +83,12 @@ $result = mysqli_query($connection, $sql_query)
 $result = $connection -> query($sql_query);
 ```
 ---
+
 ## Check query error 
 - it's very simple, just type the previous code inside a condition 
+
 ### 1- using `mysqli_query()`
+
 ```php
 if (mysqli_query($con, $query)){
 	echo 'Done :)';
@@ -90,15 +97,21 @@ else{
 	echo 'Error :( ( ' . $con -> error . ')';
 }
 ```
+
 ### 2- using `query()`
+
 ```php
 if ($con -> query($sql_query)){
 	echo 'Done :)';
 }
 ```
+
 - Don't query the database then use this code to check because this code will query the database
+
 ---
+
 ## Fetching the result 
+
 - fetch_assoc : fetch associative array
 ```php
 while($row = mysqli_fetch_assoc($result)) {  // $row = mysqli_fetch_assoc($result_object)
@@ -115,35 +128,52 @@ while($row = $result -> fetch_assoc()) {  // $row = $result_object -> fetch_asso
 ```
 ----
 ---
+
 # SQL Basics 
+
 ## Insert 
+
 ```sql
 INSERT INTO table_name(column1, column2) VALUES('value1', 'value2');
 ```
+
 ---
+
 ## Select 
+
 ```sql
 SELECT column1, column3 FROM table_name WHERE column1='value1' AND column3='value3';
 ```
 ---
+
 ## Update 
+
 ```sql
 UPDATE table_name SET column1='new value1', column2='new value2' WHERE column3='value3';
 ```
+
 ---
+
 ## Delete 
+
 ```sql 
 DELETE FROM table_name WHERE column2='value2';
 ```
+
 ---
 ---
+
 # Security #PHP_security
+
 ## Sanitizing input #PHP_SQLi 
+
 ```php
 $sanitized_username = mysqli_real_escape_string($connection, $username);
 $sanitized_password = mysqli_real_escape_string($connection, $password);
 ```
+
 ## Hashing the password 
+
 ```php
  $hashed_passwd = password_hash($plain_text_passwd, PASSWORD_DEFAULT);
 # We just want to hash our password using the current DEFAULT algorithm. 
