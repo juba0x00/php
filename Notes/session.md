@@ -26,6 +26,8 @@ session_start();
 - A session is started with the `session_start()` function.  Session variables are set with the PHP global variable: $_SESSION.
 
 > Note The `session_start()` function must be the very first thing in your document. Before any HTML tags.
+
+
 ---
 ## Set session variables 
 ```php
