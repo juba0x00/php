@@ -1,6 +1,8 @@
 # Forms Data 
 ## Submitting data to the same page
+
 - login.php
+
 ```php
 
 <?php
@@ -26,6 +28,7 @@ if(isset($_POST['is_submitted'])){
 ```
 ---
 ## Basic input validating 
+
 ```php
 <?php
 // isset() to check if it's available (posted) 

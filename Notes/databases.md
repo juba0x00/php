@@ -145,6 +145,7 @@ $sanitized_password = mysqli_real_escape_string($connection, $password);
 ```
 ## Hashing the password 
 ```php
- $hashed_passwd = password_hash($plain_text_passwd, PASSWORD_DEFAULT);`
-/**    * We just want to hash our password using the current DEFAULT algorithm.    *    * Beware that DEFAULT may change over time, so you would want to prepare  
+ $hashed_passwd = password_hash($plain_text_passwd, PASSWORD_DEFAULT);
+# We just want to hash our password using the current DEFAULT algorithm. 
+# Beware that DEFAULT may change over time, so you would want to prepare  
 ```
