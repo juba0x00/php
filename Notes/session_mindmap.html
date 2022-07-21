@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Session","c":[{"t":"heading","d":2,"p":{"lines":[2,3]},"v":"Table Of Contents","c":[{"t":"list_item","d":4,"p":{"lines":[3,4]},"v":"[[#What is a PHP Session?|What is a PHP Session?]]"},{"t":"list_item","d":4,"p":{"lines":[4,5]},"v":"[[#Start session|Start session]]"},{"t":"list_item","d":4,"p":{"lines":[5,6]},"v":"[[#Set session variables|Set session variables]]"},{"t":"list_item","d":4,"p":{"lines":[6,7]},"v":"[[#Get PHP session values|Get PHP session values]]"},{"t":"list_item","d":4,"p":{"lines":[7,8]},"v":"[[#Remove all session variables|Remove all session variables]]"},{"t":"list_item","d":4,"p":{"lines":[8,9]},"v":"[[#Destroy the session|Destroy the session]]"}]},{"t":"heading","d":2,"p":{"lines":[10,11]},"v":"What is a PHP Session?","c":[{"t":"bullet_list","d":3,"p":{"lines":[11,16]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[11,12]},"v":"A session is a way to store information (in variables) to be used across multiple pages.Unlike a cookie, the information is not stored on the users computer."},{"t":"list_item","d":4,"p":{"lines":[12,13]},"v":"When you work with an application, you open it, do some changes, and then you close it. This is much like a Session. The computer knows who you are. It knows when you start the application and when you end. But on the internet there is one problem: the web server does not know who you are or what you do, because the HTTP address doesn't maintain state."},{"t":"list_item","d":4,"p":{"lines":[13,14]},"v":"Session variables solve this problem by storing user information to be used across multiple pages (e.g. username, favorite color, etc). By default, <strong>session variables last until the user closes the browser.</strong>"},{"t":"list_item","d":4,"p":{"lines":[14,15]},"v":"So; Session variables hold information about one single user, and are available to all pages in one application."}]},{"t":"blockquote","d":3,"p":{"lines":[16,17]},"v":"","c":[{"t":"paragraph","d":4,"p":{"lines":[16,17]},"v":"Tip: If you need a permanent storage, you may want to store the data in a <a href=\"https://www.w3schools.com/php/php_mysql_intro.asp\">database</a>."}]}]},{"t":"heading","d":2,"p":{"lines":[19,20]},"v":"Start session","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token function\">session_start</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>  \n</code></pre>\n"},{"t":"bullet_list","d":3,"p":{"lines":[23,25]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[23,24]},"v":"A session is started with the <code>session_start()</code> function.  Session variables are set with the PHP global variable: $_SESSION."}]},{"t":"blockquote","d":3,"p":{"lines":[25,26]},"v":"","c":[{"t":"paragraph","d":4,"p":{"lines":[25,26]},"v":"Note The <code>session_start()</code> function must be the very first thing in your document. Before any HTML tags."}]}]},{"t":"heading","d":2,"p":{"lines":[27,28]},"v":"Set session variables","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token global\">$_SESSION</span><span class=\"token punctuation\">[</span><span class=\"token string double-quoted-string\">\"favcolor\"</span><span class=\"token punctuation\">]</span> <span class=\"token operator\">=</span> <span class=\"token string double-quoted-string\">\"yellow\"</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{"lines":[32,33]},"v":"Get PHP session values","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token function\">print_r</span><span class=\"token punctuation\">(</span><span class=\"token global\">$_SESSION</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span> <span class=\"token comment\">// print all the values </span>\n<span class=\"token keyword\">echo</span> <span class=\"token string double-quoted-string\">\"Favorite color is \"</span> <span class=\"token operator\">.</span> <span class=\"token global\">$_SESSION</span><span class=\"token punctuation\">[</span><span class=\"token string double-quoted-string\">\"favcolor\"</span><span class=\"token punctuation\">]</span> <span class=\"token operator\">.</span> <span class=\"token string double-quoted-string\">\".&lt;br>\"</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"},{"t":"bullet_list","d":3,"p":{"lines":[38,40]},"v":"","c":[{"t":"list_item","d":4,"p":{"lines":[38,39]},"v":"<strong>How does it work? How does it know it's me?</strong>"}]},{"t":"blockquote","d":3,"p":{"lines":[40,41]},"v":"","c":[{"t":"paragraph","d":4,"p":{"lines":[40,41]},"v":"Most sessions set a user-key on the user's computer that looks something like this: 765487cf34ert8dede5a562e4f3a7e12. Then, when a session is opened on another page, it scans the computer for a user-key. If there is a match, it accesses that session, if not, it starts a new session."}]}]},{"t":"heading","d":2,"p":{"lines":[43,44]},"v":"Remove all session variables","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token function\">session_unset</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{"lines":[48,49]},"v":"Destroy the session","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token function\">session_destroy</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"}]}]})</script>
+</body>
+</html>

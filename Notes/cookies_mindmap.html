@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@6.7.0"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.2.7"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.2.0/dist/index.umd.min.js"></script><script>(r => {
+                setTimeout(r);
+              })(() => {
+  const {
+    markmap,
+    mm
+  } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, data) => {
+        const {
+          Markmap
+        } = getMarkmap();
+        window.mm = Markmap.create('svg#mindmap', getOptions == null ? void 0 : getOptions(), data);
+      })(() => window.markmap,null,{"t":"heading","d":1,"p":{"lines":[0,1]},"v":"Cookies","c":[{"t":"heading","d":2,"p":{"lines":[1,2]},"v":"What is the Cookie","c":[{"t":"list_item","d":4,"p":{"lines":[2,3]},"v":"A cookie is often <strong>used to identify a user</strong>. A cookie is a small file that the server embeds on the user's computer. Each time the same computer requests a page with a browser, it will send the cookie too. With PHP, you can both create and retrieve cookie values."}]},{"t":"heading","d":2,"p":{"lines":[4,5]},"v":"Set cookie","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token function\">setcookie</span><span class=\"token punctuation\">(</span><span class=\"token string single-quoted-string\">'cookie_name'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'cookie_value'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'expiration_date'</span><span class=\"token punctuation\">)</span>\n<span class=\"token function\">setcookie</span><span class=\"token punctuation\">(</span><span class=\"token string single-quoted-string\">'cookie_name'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'cookie_value'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'expire_date'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'path'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'domain'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'secure'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'httponly_'</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"},{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\">num_of_weeks <span class=\"token operator\">=</span> <span class=\"token number\">2</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token variable\">$expiration</span> <span class=\"token operator\">=</span> <span class=\"token function\">time</span><span class=\"token punctuation\">(</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">+</span> <span class=\"token punctuation\">(</span><span class=\"token number\">60</span> <span class=\"token operator\">*</span> <span class=\"token number\">60</span> <span class=\"token operator\">*</span> <span class=\"token number\">24</span> <span class=\"token operator\">*</span> <span class=\"token number\">7</span><span class=\"token punctuation\">)</span> <span class=\"token operator\">*</span> <span class=\"token variable\">$num_of_weeks</span><span class=\"token punctuation\">;</span> \n\n<span class=\"token comment\">// time() returns the current time </span>\n\n\n<span class=\"token comment\">// setcookie('key', 'value', 'expiration_date')</span>\n<span class=\"token function\">setcookie</span><span class=\"token punctuation\">(</span><span class=\"token string single-quoted-string\">'username'</span><span class=\"token punctuation\">,</span> <span class=\"token string single-quoted-string\">'mohamed'</span><span class=\"token punctuation\">,</span> <span class=\"token variable\">$expiration</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"}]},{"t":"heading","d":2,"p":{"lines":[22,23]},"v":"Get cookie","c":[{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token keyword\">echo</span> <span class=\"token global\">$_COOKIE</span><span class=\"token punctuation\">[</span><span class=\"token string single-quoted-string\">'cookie_name'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n</code></pre>\n"},{"t":"fence","d":3,"v":"<pre class=\"language-php\"><code class=\"language-php\"><span class=\"token keyword\">if</span><span class=\"token punctuation\">(</span><span class=\"token keyword\">isset</span><span class=\"token punctuation\">(</span><span class=\"token global\">$_COOKIE</span><span class=\"token punctuation\">[</span><span class=\"token string single-quoted-string\">'username'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">)</span><span class=\"token punctuation\">)</span>\n<span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">echo</span> <span class=\"token global\">$_COOKIE</span><span class=\"token punctuation\">[</span><span class=\"token string single-quoted-string\">'username'</span><span class=\"token punctuation\">]</span><span class=\"token punctuation\">;</span>\n\n<span class=\"token punctuation\">}</span>\n<span class=\"token keyword\">else</span><span class=\"token punctuation\">{</span>\n    <span class=\"token keyword\">echo</span> <span class=\"token string single-quoted-string\">'No 🍪 found'</span><span class=\"token punctuation\">;</span>\n<span class=\"token punctuation\">}</span>\n</code></pre>\n"},{"t":"heading","d":3,"p":{"lines":[38,39]},"v":"<a href=\"session.md\">So what is the session ?</a>"}]}]})</script>
+</body>
+</html>

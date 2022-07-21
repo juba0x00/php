@@ -89,7 +89,7 @@
 # PHP	Basics 
 ---
 ## Basics Syntax
-### <mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># comment</mark> 
+### <mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># Comment</mark> 
 ### Array
 #### 1-Indexed Array 
 ##### `$array_name = array(value, value, ..);`
