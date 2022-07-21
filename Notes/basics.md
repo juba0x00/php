@@ -87,8 +87,6 @@
 ---
 ---
 # PHP	Basics 
-## you can download [this]() mind map and explore it  
----
 ---
 ## Basics Syntax
 ### <mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># comment</mark> 
