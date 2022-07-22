@@ -369,10 +369,14 @@ catch(Exception $e) {
 <? "you can use 'single quotes ' in double quotes, or I can reverse it "?>
 <? " you can use \" backslash with double quotes to put double quotes in double quotes\"?>
 ```
+
 - Hint: it didn't work with me
+ 
 ---
 ---
+
 ### `$bool = true;` neither True nor TRUE 
+
 ---
 ---
 ### Working with files #PHP_important 
@@ -385,6 +389,15 @@ catch(Exception $e) {
 	fclose($fp);
 ?>
 ```
+
+```php
+<?php  
+$file = fopen("test.txt","r");  
+fread($file,"10");  
+fclose($file);  
+?>
+```
+
 ---
 ---
 ### Concatenation assignment
