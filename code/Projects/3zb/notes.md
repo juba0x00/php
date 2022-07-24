@@ -2,7 +2,7 @@
 
 # DataBase Connection
 
-- **We use built in function called** `mysqli_connect()` **to open a new connection to the MySQL server**
+- **We use built in function called** `mysqli_connect()` **to open a new connection to the MySQL server:**
 
 ```php
 <?php
