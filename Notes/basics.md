@@ -1,95 +1,99 @@
-# Table Of Contents: 
-- [[#Basics Syntax|Basics Syntax]]
-	- [[#Basics Syntax#Array|Array]]
-		- [[#Array#1-Indexed Array|1-Indexed Array]]
-			- [[#1-Indexed Array#`$array_name = array(value, value, ..);`|`$array_name = array(value, value, ..);`]]
-		- [[#Array#2-Associative Array|2-Associative Array]]
-			- [[#2-Associative Array#`$array_name = array('key' ⇒ 'value'); echo $array_name['key'];` like the dictionary in python|`$array_name = array('key' ⇒ 'value'); echo $array_name['key'];` like the dictionary in python]]
-		- [[#Array#3-Multidimensional arrays|3-Multidimensional arrays]]
-			- [[#3-Multidimensional arrays#`$arr = array(array('bla', 'bla', 'bla'));` 2D array|`$arr = array(array('bla', 'bla', 'bla'));` 2D array]]
-	- [[#Basics Syntax#Print all the array|Print all the array]]
-		- [[#Print all the array#1- `printr(array)`|1- `printr(array)`]]
-		- [[#Print all the array#2- `foreach()`|2- `foreach()`]]
-			- [[#2- `foreach()`#2.1- `foreach(Indexed_array)`|2.1- `foreach(Indexed_array)`]]
-				- [[#2.1- `foreach(Indexed_array)`#`foreach ($names as $name){echo $name;}`|`foreach ($names as $name){echo $name;}`]]
-			- [[#2- `foreach()`#2.2- `foreach(associative_array)`|2.2- `foreach(associative_array)`]]
-				- [[#2.2- `foreach(associative_array)`#`foreach($students_and_grades as $student_name => $student_grade){echo "what you want!";}`|`foreach($students_and_grades as $student_name => $student_grade){echo "what you want!";}`]]
-	- [[#Basics Syntax#No value|No value]]
-		- [[#No value#`$name= NULL;`|`$name= NULL;`]]
-	- [[#Basics Syntax#Constant|Constant]]
-		- [[#Constant#`define(const, value);|`define(const, value);]]
-		- [[#Constant#`define('PI',3.14;)`|`define('PI',3.14;)`]]
-	- [[#Basics Syntax#combine strings with `.` (concatenation)|combine strings with `.` (concatenation)]]
-		- [[#combine strings with `.` (concatenation)#`echo "Hi, " . $name;`|`echo "Hi, " . $name;`]]
-	- [[#Basics Syntax#pass data using forms|pass data using forms]]
-		- [[#pass data using forms#`$_GET` is a get  reserved variable Get pass through the URL|`$_GET` is a get  reserved variable Get pass through the URL]]
-		- [[#pass data using forms#`$_POST` pass through the Protocol body, payload|`$_POST` pass through the Protocol body, payload]]
-	- [[#Basics Syntax#Superglobals : reserved variables|Superglobals : reserved variables]]
-		- [[#Superglobals : reserved variables#**`$GLOBALS`**  → `$GLOBALS['$_POST', '$_GET']`;|**`$GLOBALS`**  → `$GLOBALS['$_POST', '$_GET']`;]]
-		- [[#Superglobals : reserved variables#**`$_POST `** or `$GLOBALS['_POST']`|**`$_POST `** or `$GLOBALS['_POST']`]]
-		- [[#Superglobals : reserved variables#**`$_GET `** or `$GLOBALS['_GET']`|**`$_GET `** or `$GLOBALS['_GET']`]]
-		- [[#Superglobals : reserved variables#**`$_COOKIE `** or  `$GLOBALS['_COOKIE']`|**`$_COOKIE `** or  `$GLOBALS['_COOKIE']`]]
-		- [[#Superglobals : reserved variables#**`$_SESSION`** or  `$GLOBALS['_SESSION']`|**`$_SESSION`** or  `$GLOBALS['_SESSION']`]]
-		- [[#Superglobals : reserved variables#**`$_SERVER`** or  `$GLOBALS['_SERVER']`|**`$_SERVER`** or  `$GLOBALS['_SERVER']`]]
-		- [[#Superglobals : reserved variables#**`$_FILES`** or  `$GLOBALS['_FILES']`|**`$_FILES`** or  `$GLOBALS['_FILES']`]]
-		- [[#Superglobals : reserved variables#**`$_REQUEST`** or  `$GLOBALS['_REQUEST']`|**`$_REQUEST`** or  `$GLOBALS['_REQUEST']`]]
-		- [[#Superglobals : reserved variables#**`$_ENV`** or  `$GLOBALS['_ENV']`|**`$_ENV`** or  `$GLOBALS['_ENV']`]]
-	- [[#Basics Syntax#Math Operations|Math Operations]]
-		- [[#Math Operations#`echo (math_operation);` without any additional symbols|`echo (math_operation);` without any additional symbols]]
-	- [[#Basics Syntax#Comparison operators|Comparison operators]]
-		- [[#Comparison operators#`==` Equal|`==` Equal]]
-		- [[#Comparison operators#`===` identical (equal and the same Data Type)|`===` identical (equal and the same Data Type)]]
-		- [[#Comparison operators#`!=` Not equal or `<>`|`!=` Not equal or `<>`]]
-		- [[#Comparison operators#`!==` Not identical|`!==` Not identical]]
-		- [[#Comparison operators#`a <=> b` spaceship|`a <=> b` spaceship]]
-	- [[#Basics Syntax#Logical Operators|Logical Operators]]
-		- [[#Logical Operators#`and` , `&&`  ⇒ AND|`and` , `&&`  ⇒ AND]]
-		- [[#Logical Operators#`or` , `||`        ⇒ OR|`or` , `||`        ⇒ OR]]
-		- [[#Logical Operators#`!`              ⇒ NOT|`!`              ⇒ NOT]]
-		- [[#Logical Operators#`xor`         ⇒ XOR|`xor`         ⇒ XOR]]
-	- [[#Basics Syntax#If condition|If condition]]
-		- [[#If condition#1-Normal if|1-Normal if]]
-		- [[#If condition#2-`if-endif`|2-`if-endif`]]
-		- [[#If condition#3-inline-if|3-inline-if]]
-			- [[#3-inline-if#`$variable = (condition) ? "value" : "another value" ;`|`$variable = (condition) ? "value" : "another value" ;`]]
-	- [[#Basics Syntax#the for loop is similar to C and C++|the for loop is similar to C and C++]]
-		- [[#the for loop is similar to C and C++#`for ($num = 0; $num < 100 ; $num++){echo $num}`|`for ($num = 0; $num < 100 ; $num++){echo $num}`]]
-		- [[#the for loop is similar to C and C++#`for-endfor`|`for-endfor`]]
-	- [[#Basics Syntax#While loop is similar to C and C++|While loop is similar to C and C++]]
-		- [[#While loop is similar to C and C++#`while ($i > 100){echo $i; $i--;}`|`while ($i > 100){echo $i; $i--;}`]]
-	- [[#Basics Syntax#do-while is similar to C and C++, don't forget the ; after the while|do-while is similar to C and C++, don't forget the ; after the while]]
-	- [[#Basics Syntax#Functions|Functions]]
-		- [[#Functions#basic syntax:|basic syntax:]]
-			- [[#basic syntax:#`function func_name($param1, param2=5)` // param2 has default value 5|`function func_name($param1, param2=5)` // param2 has default value 5]]
-		- [[#Functions#Value parameter and Reference parameter|Value parameter and Reference parameter]]
-		- [[#Functions#Reference parameter|Reference parameter]]
-		- [[#Functions#variable number of parameters|variable number of parameters]]
-		- [[#Functions#return multiple values|return multiple values]]
-		- [[#Functions#double list|double list]]
-	- [[#Basics Syntax#exception handling|exception handling]]
-	- [[#Basics Syntax#PHP scripts inside HTML page|PHP scripts inside HTML page]]
-	- [[#Basics Syntax#`$bool = true;` neither True nor TRUE|`$bool = true;` neither True nor TRUE]]
-	- [[#Basics Syntax#Working with files #PHP_important|Working with files #PHP_important]]
-	- [[#Basics Syntax#Concatenation assignment|Concatenation assignment]]
-	- [[#Basics Syntax#Strings|Strings]]
-		- [[#Strings#convert a string to array with spaces|convert a string to array with spaces]]
-	- [[#Basics Syntax#HTML special chars #PHP_security|HTML special chars #PHP_security]]
-	- [[#Basics Syntax#Redirection #PHP_important|Redirection #PHP_important]]
-	- [[#Basics Syntax#Including Files #PHP_important #PHP_security #PHP_LFI|Including Files #PHP_important #PHP_security #PHP_LFI]]
-
+# Table Of Contents 
+- [# PHP	Basics](#basics)
+  - [Basics Syntax](#basics-syntax)
+    - [<mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># Comment</mark>](#comment)
+    - [Array](#array)
+      - [1-Indexed Array](#1-indexed-array)
+        - [`$array_name = array(value, value, ..);`](#array_name--arrayvalue-value-)
+      - [2-Associative Array](#2-associative-array)
+        - [`$array_name = array('key' ⇒ 'value'); echo $array_name['key'];` like the dictionary in python](#array_name--arraykey--value-echo-array_namekey-like-the-dictionary-in-python)
+      - [3-Multidimensional arrays](#3-multidimensional-arrays)
+  - [##### `$arr = array(array('bla', 'bla', 'bla'));` 2D array](#-arr--arrayarraybla-bla-bla-2d-array)
+    - [Print all the array](#print-all-the-array)
+      - [1- `printr(array)`](#1--printrarray)
+      - [2- `foreach()`](#2--foreach)
+        - [2.1- `foreach(Indexed_array)`](#21--foreachindexed_array)
+          - [`foreach ($names as $name){echo $name;}`](#foreach-names-as-nameecho-name)
+        - [2.2- `foreach(associative_array)`](#22--foreachassociative_array)
+          - [`foreach($students_and_grades as $student_name => $student_grade){echo "what you want!";}`](#foreachstudents_and_grades-as-student_name--student_gradeecho-what-you-want)
+    - [No value](#no-value)
+  - [#### `$name= NULL;`](#-name-null)
+    - [Constant](#constant)
+      - [`define(const, value);](#defineconst-value)
+  - [#### `define('PI',3.14;)`](#-definepi314)
+    - [combine strings with `.` (concatenation)](#combine-strings-with--concatenation)
+  - [#### `echo "Hi, " . $name;`](#-echo-hi---name)
+    - [pass data using forms](#pass-data-using-forms)
+      - [`$_GET` is a get  reserved variable Get pass through the URL](#_get-is-a-get--reserved-variable-get-pass-through-the-url)
+  - [#### `$_POST` pass through the Protocol body, payload](#-_post-pass-through-the-protocol-body-payload)
+    - [Superglobals : reserved variables](#superglobals--reserved-variables)
+      - [**`$GLOBALS`**  → `$GLOBALS['$_POST', '$_GET']`;](#globals---globals_post-_get)
+      - [**`$_POST `** or `$GLOBALS['_POST']`](#_post--or-globals_post)
+      - [**`$_GET `** or `$GLOBALS['_GET']`](#_get--or-globals_get)
+      - [**`$_COOKIE `** or  `$GLOBALS['_COOKIE']`](#_cookie--or--globals_cookie)
+      - [**`$_SESSION`** or  `$GLOBALS['_SESSION']`](#_session-or--globals_session)
+      - [**`$_SERVER`** or  `$GLOBALS['_SERVER']`](#_server-or--globals_server)
+      - [**`$_FILES`** or  `$GLOBALS['_FILES']`](#_files-or--globals_files)
+      - [**`$_REQUEST`** or  `$GLOBALS['_REQUEST']`](#_request-or--globals_request)
+      - [**`$_ENV`** or  `$GLOBALS['_ENV']`](#_env-or--globals_env)
+    - [Math Operations](#math-operations)
+  - [#### `echo (math_operation);` without any additional symbols](#-echo-math_operation-without-any-additional-symbols)
+    - [Comparison operators](#comparison-operators)
+      - [`==` Equal](#-equal)
+      - [`===` identical (equal and the same Data Type)](#-identical-equal-and-the-same-data-type)
+      - [`!=` Not equal or `<>`](#-not-equal-or-)
+      - [`!==` Not identical](#-not-identical)
+      - [`a <=> b` spaceship](#a--b-spaceship)
+    - [Logical Operators](#logical-operators)
+      - [`and` , `&&`  ⇒ AND](#and-----and)
+      - [`or` , `||`        ⇒ OR](#or-----------or)
+      - [`!`              ⇒ NOT](#---------------not)
+  - [#### `xor`         ⇒ XOR](#-xor----------xor)
+    - [If condition](#if-condition)
+      - [1-Normal if](#1-normal-if)
+      - [2-`if-endif`](#2-if-endif)
+      - [3-inline-if](#3-inline-if)
+  - [##### `$variable = (condition) ? "value" : "another value" ;`](#-variable--condition--value--another-value-)
+    - [the for loop is similar to C and C++](#the-for-loop-is-similar-to-c-and-c)
+      - [`for ($num = 0; $num < 100 ; $num++){echo $num}`](#for-num--0-num--100--numecho-num)
+      - [`for-endfor`](#for-endfor)
+    - [While loop is similar to C and C++](#while-loop-is-similar-to-c-and-c)
+  - [#### `while ($i > 100){echo $i; $i--;}`](#-while-i--100echo-i-i--)
+    - [do-while is similar to C and C++, don't forget the ; after the while](#do-while-is-similar-to-c-and-c-dont-forget-the--after-the-while)
+    - [Functions](#functions)
+      - [basic syntax:](#basic-syntax)
+  - [#####  `function func_name($param1, param2=5)` // param2 has default value 5](#--function-func_nameparam1-param25--param2-has-default-value-5)
+      - [Value parameter and Reference parameter](#value-parameter-and-reference-parameter)
+      - [Reference parameter](#reference-parameter)
+      - [variable number of parameters](#variable-number-of-parameters)
+      - [return multiple values](#return-multiple-values)
+      - [double list](#double-list)
+    - [exception handling](#exception-handling)
+    - [PHP scripts inside HTML page](#php-scripts-inside-html-page)
+    - [`$bool = true;` neither True nor TRUE](#bool--true-neither-true-nor-true)
+    - [Working with files #PHP_important](#working-with-files-php_important)
+    - [Concatenation assignment](#concatenation-assignment)
+    - [Strings](#strings)
+      - [convert a string to array with spaces](#convert-a-string-to-array-with-spaces)
+  - [- Hint : you can type `echo "it is $variable";` or concatenation using **`.`** (you can't do it inside single quotes)](#--hint--you-can-type-echo-it-is-variable-or-concatenation-using--you-cant-do-it-inside-single-quotes)
+    - [HTML special chars #PHP_security](#html-special-chars-php_security)
+    - [Redirection #PHP_important](#redirection-php_important)
+    - [Including Files #PHP_important #PHP_security #PHP_LFI](#including-files-php_important-php_security-php_lfi)
+- [Woohoo You have finished 😃](#woohoo-you-have-finished-)
+- [flag{PHP_N1N94_H4CK3R} 💪](#flagphp_n1n94_h4ck3r-)
 ----
 ----
-# Tags <a name ='tags'></a>
+# Tags 
 ## #PHP_important
 ## #PHP_security
 ## #PHP_basics_end
 ## #PHP_LFI 
 ---
 ---
-# PHP	Basics 
+# PHP	Basics <a name='basics'></a>
 ---
-## Basics Syntax
-### <mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># Comment</mark> 
+## Basics Syntax<a name='basics-syntax'></a>
+### <mark style="background: #CACFD9A6;">// Comment</mark> or <mark style="background: #CACFD9A6;"># Comment</mark>  <a name='comment'></a>
 ### Array
 #### 1-Indexed Array 
 ##### `$array_name = array(value, value, ..);`
@@ -475,4 +479,4 @@ require "file"; or require ('file');# if file doesn't exist include will work wi
 ---
 ---
 # Woohoo You have finished 😃
-# flag{PHP_N1N94_H4CK3R} 💪
+# flag{PHP_N1N94_H4CK3R} 💪- [Tags <a name ='tags'></a>](#tags-)
