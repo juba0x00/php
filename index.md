@@ -1,6 +1,7 @@
 # Topics 
 
 ## [PHP Basics](Notes/basics.md)
+## [PHP Basics](Notes/basics.md#tags)
 ## [Basics mind map](Notes/basics_mindmap.html)
 ## [Forms](Notes/forms.md)
 ## [Databases](Notes/databases.md)
