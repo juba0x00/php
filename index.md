@@ -1,6 +1,6 @@
-# Topics 
 ### Note: I'm using Obsidian to make these Notes, so the best software to view them is Obsidian to click on the tags, mind maps, and more.
 
+# Topics 
 ## [PHP Basics](Notes/basics.md#tags)
 ## [Basics mind map](Notes/basics_mindmap.html)
 ## [Forms](Notes/forms.md)
@@ -33,4 +33,4 @@
 ----
 # References: 
 ## [w3schools](https://www.w3schools.com/php/default.asp)
-## [Edwin Diaz Course](https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/)
+## [Edwin Diaz's Course](https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/)
