@@ -83,7 +83,7 @@
 - [flag{PHP_N1N94_H4CK3R} 💪](#flagphp_n1n94_h4ck3r-)
 ----
 ----
-# Tags 
+# Tags <a name='tags'></a>
 ## #PHP_important
 ## #PHP_security
 ## #PHP_basics_end
@@ -479,4 +479,4 @@ require "file"; or require ('file');# if file doesn't exist include will work wi
 ---
 ---
 # Woohoo You have finished 😃
-# flag{PHP_N1N94_H4CK3R} 💪- [Tags <a name ='tags'></a>](#tags-)
+# flag{PHP_N1N94_H4CK3R} 💪- [Tags <a name ='tags'></a>](#tags)
