@@ -304,7 +304,7 @@ function changeMe(&$change)//it's a reference parameter
 {
 	$change=10;
 
-	global $OutTheFunction
+	global $OutTheFunction;
 }
 $change = 5;
 changeMe($change);
