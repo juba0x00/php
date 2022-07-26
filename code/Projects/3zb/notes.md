@@ -8,11 +8,8 @@
 <?php
 
     $con = mysqli_connect("localhost","root","","cms");
-    if(!$con){
-        die("Connection Failed") . mysqli_error();
-    }else{
-        echo "Connection Success";
-    }
+    if(!$con){ die("Connection Failed" . mysqli_error($con)); }
+		else{ echo "Connection Success"; }
 ?>
 ```
 
@@ -20,7 +17,7 @@
 
 # Posts Query
 
-- **We use `query()`/ `mysqli_query()` function to perform a query against a database.**
+- **We use use built in functions called `query()`/ `mysqli_query()` function to perform a query against a database.**
 
 ```php
 <?php
@@ -57,3 +54,28 @@
 
                 <?php } ?>
 ```
+
+---
+
+# Searching For Tags
+
+- **We use built in function called** `mysqli_num_rows()` **to return the number of rows in a result set**
+
+```php
+<?php
+
+        if(isset($_POST['submit'])){
+            $search_key = $_POST['search'];
+            
+            $query = "SELECT * FROM posts";
+            $query .= " WHERE post_tags LIKE '%$search_key%'";
+            
+            $search_query = mysqli_query($con, $query);
+            if(!$search_query){ die("QUERY FAILED" . mysqli_error($con)); }
+
+            $count = mysqli_num_rows($search_query);
+            if($count == 0){ echo "<h3>No Result Found</h3>"; }}
+    
+?>
+```
+---
