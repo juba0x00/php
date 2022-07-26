@@ -20,6 +20,8 @@
 
 # Posts Query
 
+- **We use `query()`/ `mysqli_query()` function to perform a query against a database.**
+
 ```php
 <?php
                 $posts_query = "SELECT * FROM posts";
@@ -38,7 +40,7 @@
                     <small>Secondary Text</small>
                 </h1>
 
-                <!-- Blog Post template  -->
+                <!-- First Blog Post -->
                 <h2>
                     <a href="#"><?php echo $post_title ?></a>
                 </h2>
