@@ -1,4 +1,5 @@
 # Topics 
+### Note: I'm using Obsidian to make these Notes, so the best software to view them is Obsidian to click on the tags, mind maps, and more.
 
 ## [PHP Basics](Notes/basics.md#tags)
 ## [Basics mind map](Notes/basics_mindmap.html)
@@ -22,7 +23,6 @@
 ### [Login.php](cms.md#login_php) #PHP_SQLi
 ### [Logout.php](cms.md#logout_php) 
 ---
-### Note: I'm using Obsidian to make these Notes, so the best software to view them is Obsidian to click on the tags, mind maps, and more.
 # Tags
 ## #PHP_security 
 ## #PHP_LFI 
@@ -31,5 +31,6 @@
 ## #PHP_important 
 ## #PHP_basics_end 
 ----
-### References: 
-#### [w3schools](https://www.w3schools.com/php/default.asp)
+# References: 
+## [w3schools](https://www.w3schools.com/php/default.asp)
+## [Edwin Diaz Course](https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/)
