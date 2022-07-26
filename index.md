@@ -19,6 +19,7 @@
 ## [Query comments](Code/Projects/juba/cms.md#vu_comments)
 ## [Login form](Code/Projects/juba/cms.md#login_form)
 ## [Login.php](Code/Projects/juba/cms.md#login_php) #PHP_SQLi
+## [Logout.php](Code/Projects/juba/cms.md#logout_php) 
 ---
 ### Note: I'm using Obsidian to make these Notes, so the best software to view them is Obsidian to click on the tags, mind maps, and more.
 # Tags

@@ -326,9 +326,8 @@ while ($post = $posts -> fetch_assoc()){
 ## Login.php #PHP_SQLi <a name='login_php'></a>
 ```php
 <?php
-
+session_start();
 include "db_connect.php";
-
 
 if(isset($_POST['login'])){
     $login_name = $_POST['username'];
@@ -356,14 +355,38 @@ if(isset($_POST['login'])){
         $db_lastname = $row['lastname'];
         $db_rols = $row['role'];
     }   
+    #PHP_SQLi
     
-    if($login_name == $db_username and $login_pass == $db_password)
+    if($login_name === $db_username and $login_pass === $db_password)
     {
+        $_SESSION['username'] = $db_username;
+        $_SESSION['firstname'] = $db_firstname;
+        $_SESSION['lastname'] = $db_lastname;
+        $_SESSION['role'] = $db_role;
+        $_SESSION['lastname'] = $db_lastname;
 
-        header("Location: ../admin");
-    }else{
+        header("Location: ../admin"); // you should start the session inside the admin page (include it header.php)
+
+    }else{# Wrong credentials 
         header("Location: ../index.php");
     }
 }
+?>
+```
+
+## logout.php <a name='logout_php'></a>
+```php
+<?php
+
+session_start();
+
+$_SESSION['username'] = null;
+$_SESSION['firstname'] = null;
+$_SESSION['lastname'] = null;
+$_SESSION['role'] = null;
+$_SESSION['lastname'] = null;
+
+
+header("Location: ../admins");
 ?>
 ```

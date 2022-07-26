@@ -21,7 +21,7 @@
                 </div>
 
 
-                <!-- Blog Search Well -->
+                <!-- Login form -->
                 <div class="well">
                     <h4>Login</h4>
 

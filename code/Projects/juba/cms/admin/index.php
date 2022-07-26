@@ -1,10 +1,10 @@
-<?php include "../includes/header.php" ;?>
+<?php include "includes/header.php" ;?>
 <?php include "../includes/db_connect.php" ;?>
 
 <body>
 
 
-    <?php include "../includes/navigation.php"; ?>
+    <?php include "includes/navigation.php"; ?>
     <!-- Page Content -->
     <div class="container">
 
@@ -13,9 +13,9 @@
             <!-- Blog Entries Column -->
             <div class="col-md-8">
 
-                <h1 class="page-header">
-                    <!-- Page Heading -->
-                    <small>Secondary Text</small>
+                <h1 class="page-header" >
+                    <?php echo "Welcome " . $_SESSION['username'];?>
+                    <small>;)</small>
                 </h1>
 
 
