@@ -8,13 +8,8 @@
 <?php
     // 0pen The Connection
     $con = mysqli_connect("localhost","Azab","toor","blog");
-    if(!$con){
-        die("Connection Failed") . mysqli_error();
-        exit;
-    }
-    else{
-        echo "Connection Success";
-    }
+    if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
+    else{ echo "Connection Success"; }
     
     // D0 The Operations
     $query = "SELECT * FROM users";
@@ -24,8 +19,8 @@
         $email = $row['email'];
         $username = $row['username'];
         $password = $row['password'];
-
-    }
+        }
+    
     // Cl0sing The Connection
     mysqli_free_result($result);
     mysqli_close($con);
