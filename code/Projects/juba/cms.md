@@ -393,7 +393,7 @@ header("Location: ../admins");
 
 ---
 
-## File Upload #PHP_File_upload_vuln 
+## File Upload #PHP_File_upload_vuln <a name='Fupload'></a>
 - the first thing you need is to create an "uploads" file in the `$_SERVER['DOCUMENT_ROOT']` 
 ```bash
 mkdir /var/www/html/uploads
@@ -410,7 +410,7 @@ mkdir /var/www/html/uploads
 
 ```
 
-### PHP file Upload <a name='Fupload'></a>
+### PHP file Upload 
 - `$_FILES['filename']`
 	- `$_FILES['html input file tag name attribue']` will hold all the data about the uploaded file \
 	- `$_FILES['userfile']['tmp_name'];`  the file uploaded to temp directory first `upload_tmp_dir =` in php.ini
