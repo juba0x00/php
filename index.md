@@ -1,17 +1,13 @@
 ### Note: I'm using Obsidian to make these Notes, so the best software to view them is Obsidian to click on the tags, mind maps, and more.
 
 # Topics 
-## [PHP Basics](Notes/basics.md#tags)
-## [Basics mind map](Notes/basics_mindmap.html)
+## [PHP Basics](Notes/basics.md#tags)                               [Basics mind map](Notes/basics_mindmap.html)
 ## [Forms](Notes/forms.md)
-## [Databases](Notes/databases.md)
-## [Database mind map](Notes/databases_mindmap.html)
-## [Cookies](Notes/cookies🍪.md)
-## [Cookies mind map](Notes/cookies_mindmap.html)
-## [Sessions](Notes/session.md)
-## [Sessions mind map](Notes/session_mindmap.html)
+## [Databases](Notes/databases.md)                                    [Database mind map](Notes/databases_mindmap.html)
+## [Cookies](Notes/cookies🍪.md)                                         [Cookies mind map](Notes/cookies_mindmap.html)
+## [Sessions](Notes/session.md)                                             [Sessions mind map](Notes/session_mindmap.html)
 ---
-# Projects 
+# Projects <a name='projects'></a>
 ## CMS
 ### [Query posts](cms.md#posts)
 ### [Search for a tag](cms.md#search)
@@ -22,6 +18,8 @@
 ### [Login form](cms.md#login_form)
 ### [Login.php](cms.md#login_php) #PHP_SQLi
 ### [Logout.php](cms.md#logout_php) 
+### [File Upload (Detailed) #PHP_File_upload_vuln](cms.md#Fupload) 
+
 ---
 # Tags
 ## #PHP_security 

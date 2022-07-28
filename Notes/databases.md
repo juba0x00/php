@@ -126,6 +126,11 @@ while($row = $result -> fetch_assoc()) {  // $row = $result_object -> fetch_asso
     }
 
 ```
+---
+## number of rows 
+```php
+$n_of_rows = $result -> num_rows;
+```
 ----
 ---
 

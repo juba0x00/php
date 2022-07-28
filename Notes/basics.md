@@ -479,4 +479,4 @@ require "file"; or require ('file');# if file doesn't exist include will work wi
 ---
 ---
 # Woohoo You have finished 😃
-# flag{PHP_N1N94_H4CK3R} 💪- [Tags <a name ='tags'></a>](#tags)
+# flag{PHP_N1N94_H4CK3R} 💪- [Tags](#tags)

@@ -390,3 +390,53 @@ $_SESSION['lastname'] = null;
 header("Location: ../admins");
 ?>
 ```
+
+---
+
+## File Upload #PHP_File_upload_vuln 
+- the first thing you need is to create an "uploads" file in the `$_SERVER['DOCUMENT_ROOT']` 
+```bash
+mkdir /var/www/html/uploads
+```
+
+### Simple HTML upload form 
+```html
+<form method='post' enctype='multipart/form-data'>  <!-- you should specify the encoding type (enctype) -->
+
+<input type='file' name='user_file'/> 
+<input type='submit' name='wanna_upload'/>
+
+</form>
+
+```
+
+### PHP file Upload <a name='Fupload'></a>
+- `$_FILES['filename']`
+	- `$_FILES['html input file tag name attribue']` will hold all the data about the uploaded file \
+	- `$_FILES['userfile']['tmp_name'];`  the file uploaded to temp directory first `upload_tmp_dir =` in php.ini
+	- `$_FILES['userfile']['name'];`
+	- `$_FILES['userfile']['size'];`
+	- `$_FILES['userfile']['type'];`
+	- `$_FILES['userfile']['error'];` equals to zero () if there is no error (`UPLOAD_ERR_OK` is a constant equals to 0)
+		- `php > echo "output = " UPLOAD_ERR_OK;  # output = 0 `
+- `move_uploaded_file($tmp_name, $save_path)` is a build-in function 
+```php
+<?php
+if(isset($_POST['wanna_upload']))
+
+{
+	
+	$uploads_dir = $_SERVER['DOCUMENT_ROOT'] . '/uploads';
+	# upload_dir = '/var/www/html' . '/uploads'	
+	
+	$user_file = '';
+	
+	if($_FILES['user_file']['error'] == UPLOAD_ERR_OK){ # check if there is no error 
+	
+		$tmp_name = $_FILES['user_file']['tmp_name'];
+		$user_file = basename($_FILES['user_file']['name']);
+		move_uploaded_file($tmp_name, "$uploads_dir/$user_file");
+		}
+}
+?>
+```
