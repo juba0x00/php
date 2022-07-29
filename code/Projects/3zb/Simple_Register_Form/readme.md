@@ -57,7 +57,7 @@ if(isset($_GET['error_fields'])){
 ```php
 <?php
     // 0pen The Connection
-    $con = mysqli_connect("db_host","db_user","db_password","db");
+    $con = mysqli_connect("db_host","db_user","db_password","db_name");
     if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
     // Do the 0perations
     $query = "SELECT * FROM users";
@@ -97,7 +97,7 @@ if(isset($_GET['error_fields'])){
         exit;
     }
     // 0pen The Connection
-    $con = mysqli_connect("db_host","db_user","db_password","db");
+    $con = mysqli_connect("db_host","db_user","db_password","db_name");
     if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
 
     // Escape Chars To Avoid SQL Injection
