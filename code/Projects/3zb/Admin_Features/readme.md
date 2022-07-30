@@ -2,7 +2,7 @@
 
 # list.php
 
-# Listing the registered users
+# Listing the registered users and search for specific user
 
 - Note we added a new column in the **DataBase** called **admin** and gave it a **boolean** type
 
@@ -13,7 +13,13 @@
     if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
 
     // Do the 0perations
-    $query = "SELECT * FROM users";
+    $query = "SELECT * FROM users ";
+
+    if(isset($_GET['search'])){
+        $search = mysqli_real_escape_string($con, $_GET['search']);
+        $query .= "WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
+    }
+
     $result = mysqli_query($con, $query);
 ?>
     <!DOCTYPE html>
@@ -26,6 +32,10 @@
     </head>
     <body>
         <h1>List Users</h1>
+        <form method="get">
+            <input type="text" name="search" placeholder="Enter username or email to search">
+            <input type="submit" value="search">
+        </form>
             <table>
                 <thead>
                     <tr>
@@ -66,6 +76,7 @@ mysqli_free_result($result);
 mysqli_close($con);
 ?>
 ```
+
 ---
 
 # add.php
