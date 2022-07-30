@@ -1,11 +1,13 @@
 ### Note: I'm using Obsidian to make these Notes, so the best software to view them is Obsidian to click on the tags, mind maps, and more.
 
 # Topics 
-## [PHP Basics](Notes/basics.md#tags)                               [Basics mind map](Notes/basics_mindmap.html)
+## [PHP Basics](Notes/basics.md#tags) ---------------> [Basics mind map](Notes/basics_mindmap.html)
 ## [Forms](Notes/forms.md)
-## [Databases](Notes/databases.md)                                    [Database mind map](Notes/databases_mindmap.html)
-## [Cookies](Notes/cookies🍪.md)                                         [Cookies mind map](Notes/cookies_mindmap.html)
-## [Sessions](Notes/session.md)                                             [Sessions mind map](Notes/session_mindmap.html)
+## [Databases](Notes/databases.md)  --------------->        [Database mind map](Notes/databases_mindmap.html)
+## [Cookies](Notes/cookies🍪.md)       --------------->      [Cookies mind map](Notes/cookies_mindmap.html)
+## [Sessions](Notes/session.md)        --------------->            [Sessions mind map](Notes/session_mindmap.html)
+## [Validation](Notes/Validation.md)  --------------->  [Validation mind map](Notes/Validation.html)
+
 ---
 # Projects <a name='projects'></a>
 ## CMS
@@ -20,6 +22,7 @@
 ### [Logout.php](cms.md#logout_php) 
 ### [File Upload (Detailed) ](cms.md#Fupload) #PHP_File_upload_vuln
 
+
 ---
 # Tags
 ## #PHP_security 
@@ -28,7 +31,8 @@
 ## #PHP_XSS
 ## #PHP_important 
 ## #PHP_basics_end 
+#PHP_File_upload_vuln
 ----
 # References: 
 ## [w3schools](https://www.w3schools.com/php/default.asp)
-## [Edwin Diaz's Course](https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/)
+## [Edwin's Course](https://www.udemy.com/course/php-for-complete-beginners-includes-msql-object-oriented/)

@@ -19,6 +19,8 @@ $expiration = time() + (60 * 60 * 24 * 7) * $num_of_weeks;
 // setcookie('key', 'value', 'expiration_date')
 setcookie('username', 'mohamed', $expiration);
 ```
+
+- if you didn't specify expiration date it will be removed after closing the browser 
 ---
 ## Get cookie 
 
