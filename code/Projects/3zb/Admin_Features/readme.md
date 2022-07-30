@@ -1,5 +1,3 @@
-# List
-
 # list.php
 
 - Note we added a new column in the **DataBase** called **admin**
