@@ -86,10 +86,10 @@ if(isset($_GET['error_fields'])){
     if(! (isset($_POST['username']) && !empty($_POST['username']))){
         $error_fields[] = "username";
     }
-    if(! (isset($_POST['username']) && filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL))){
+    if(! (isset($_POST['email']) && filter_input(INPUT_POST, 'email', FILTER_VALIDATE_EMAIL))){
         $error_fields[] = "email";
     }
-    if(! (isset($_POST['username']) && strlen($_POST['password']) > 5)){
+    if(! (isset($_POST['password']) && strlen($_POST['password']) > 5)){
         $error_fields[] = "password";
     }
     if($error_fields){
