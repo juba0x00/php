@@ -2,7 +2,9 @@
 
 # list.php
 
-- Note we added a new column in the **DataBase** called **admin**
+# Listing the registered users and search for specfic user
+
+- Note we added a new column in the **DataBase** called **admin** and gave it a **boolean** type
 
 ```php
 <?php
