@@ -2,7 +2,7 @@
 
 # Listing the registered users
 
-- Note we added a new column in the **DataBase** called **admin**
+- Note we added a new column in the **DataBase** called **admin** and gave it a **boolean** type
 
 ```php
 <?php
