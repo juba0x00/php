@@ -32,3 +32,5 @@ $usernames = explode(':', $colon_separated_names);
 ```php
 echo nl2br("List: \n 1- first options \n 2- second options");
 ```
+
+- `nl2br` stands for New Line To `<br>`
