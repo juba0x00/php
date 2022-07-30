@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         exit;
     }
     // 0pen The Connection
-    $con = mysqli_connect("localhost","Azab","toor","blog");
+    $con = mysqli_connect("db_host","db_user","db_password","db_name");
     if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
 
     // Escape Chars To Avoid SQL Injection
