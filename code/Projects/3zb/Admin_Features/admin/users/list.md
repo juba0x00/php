@@ -11,7 +11,13 @@
     if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
 
     // Do the 0perations
-    $query = "SELECT * FROM users";
+    $query = "SELECT * FROM users ";
+
+    if(isset($_GET['search'])){
+        $search = mysqli_real_escape_string($con, $_GET['search']);
+        $query .= "WHERE username LIKE '%$search%' OR email LIKE '%$search%'";
+    }
+
     $result = mysqli_query($con, $query);
 ?>
     <!DOCTYPE html>
