@@ -30,6 +30,10 @@
     </head>
     <body>
         <h1>List Users</h1>
+        <form method="get">
+            <input type="text" name="search" placeholder="Enter username or email to search">
+            <input type="submit" value="search">
+        </form>
             <table>
                 <thead>
                     <tr>
