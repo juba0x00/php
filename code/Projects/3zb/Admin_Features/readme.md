@@ -1,6 +1,6 @@
 # list.php
 
-# Listing the registed users
+# Listing the registered users
 
 - Note we added a new column in the **DataBase** called **admin**
 
