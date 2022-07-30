@@ -420,6 +420,9 @@ mkdir /var/www/html/uploads
 	- `$_FILES['userfile']['error'];` equals to zero () if there is no error (`UPLOAD_ERR_OK` is a constant equals to 0)
 		- `php > echo "output = " UPLOAD_ERR_OK;  # output = 0 `
 - `move_uploaded_file($tmp_name, $save_path)` is a build-in function 
+
+
+
 ```php
 <?php
 if(isset($_POST['wanna_upload']))
@@ -440,3 +443,6 @@ if(isset($_POST['wanna_upload']))
 }
 ?>
 ```
+
+
+
