@@ -3,7 +3,8 @@
 ```php
 $username = trim($_POST['username']);
 ```
-
+- `rtrim()` Remove trailing spaces from a string
+- `ltrim()` Remove leading spaces from a string
 
 ## Special characters `addslashes()`
 
