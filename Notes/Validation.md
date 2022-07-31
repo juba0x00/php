@@ -1,7 +1,7 @@
 # Server-Side Validation 
 ## Removing White-Spaces `trim()`
 ```php
-$username = trim($_POST['username');
+$username = trim($_POST['username']);
 ```
 
 
