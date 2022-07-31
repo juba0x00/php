@@ -113,6 +113,8 @@ if ($con -> query($sql_query)){
 ## Fetching the result 
 
 - fetch_assoc : fetch associative array
+
+
 ```php
 while($row = mysqli_fetch_assoc($result)) {  // $row = mysqli_fetch_assoc($result_object)
     echo "id: " . $row["id"]. " - Name: " . $row["name"];
@@ -128,6 +130,7 @@ while($row = $result -> fetch_assoc()) {  // $row = $result_object -> fetch_asso
 ```
 ---
 ## number of rows 
+
 ```php
 $n_of_rows = $result -> num_rows;
 ```
