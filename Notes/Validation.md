@@ -31,6 +31,14 @@ $usernames = explode(':', $colon_separated_names);
 ```
 
 
+## String To UpperCase
+
+```php
+	$strUpper = strtoupper($string);
+```
+
+- use `strtolower()` to convert string to LowerCase
+
 ## convert `\n` to `<br/>`
 
 ```php
