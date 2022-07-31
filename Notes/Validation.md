@@ -39,6 +39,24 @@ $usernames = explode(':', $colon_separated_names);
 
 - use `strtolower()` to convert string to LowerCase
 
+## ucfirst()
+
+- Convert the first character of "hello" to uppercase
+
+```php
+	echo ucfirst("hello world!");
+```
+
+
+## ucwords()
+
+- Convert the first character of each word to uppercase
+
+```php
+	echo ucwords("hello world");
+```
+
+
 ## convert `\n` to `<br/>`
 
 ```php
