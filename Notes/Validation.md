@@ -20,6 +20,9 @@ $usernames = explode(':', $colon_separated_names);
 ```
 
 
+- use `implode()` to convert array into string  
+
+
 ## String Length
 
 ```php
