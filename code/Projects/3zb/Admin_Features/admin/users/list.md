@@ -1,5 +1,3 @@
-# List
-
 # list.php
 
 # Listing the registered users and search for specific user
