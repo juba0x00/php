@@ -1,9 +1,10 @@
 # Server-Side Validation 
 ## Removing White-Spaces `trim()`
 ```php
-$username = trim($_POST['username');
+$username = trim($_POST['username']);
 ```
-
+- `rtrim()` Remove trailing spaces from a string
+- `ltrim()` Remove leading spaces from a string
 
 ## Special characters `addslashes()`
 
@@ -20,10 +21,39 @@ $usernames = explode(':', $colon_separated_names);
 ```
 
 
+- use `join()` / `implode()` to convert array into string  
+
+
 ## String Length
 
 ```php
 $length = strlen($username);
+```
+
+
+## String To UpperCase
+
+```php
+	$strUpper = strtoupper($string);
+```
+
+- use `strtolower()` to convert string to LowerCase
+
+## ucfirst()
+
+- Convert the first character of "hello" to uppercase
+
+```php
+	echo ucfirst("hello world!");
+```
+
+
+## ucwords()
+
+- Convert the first character of each word to uppercase
+
+```php
+	echo ucwords("hello world");
 ```
 
 
