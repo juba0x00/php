@@ -23,7 +23,7 @@ $usernames = explode(':', $colon_separated_names);
 ## String Length
 
 ```php
-	$length = strlen($username);
+$length = strlen($username);
 ```
 
 

@@ -22,7 +22,6 @@
 ### [Logout.php](cms.md#logout_php) 
 ### [File Upload (Detailed) ](cms.md#Fupload) #PHP_File_upload_vuln
 
-
 ---
 # Tags
 ## #PHP_security 
