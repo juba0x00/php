@@ -3,7 +3,7 @@
 
    // 0pen The Connection
    $con = mysqli_connect("localhost","root","","auth");
-   if(!$con){ die("Connection Failed") . mysqli_error(); exit; }
+   if(!$con){ die("Connection Failed") . mysqli_connect_error(); exit; }
 
 
                     //  PDO Connection

@@ -64,3 +64,18 @@ echo nl2br("List: \n 1- first options \n 2- second options");
 ```
 
 - `nl2br` stands for New Line To `<br>`
+
+
+## Filter variable 
+
+```php
+// Input Sanitization To Avoid SQL Injection And XSS .....
+
+$username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
+
+$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+
+$password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+
+$password = password_hash($password, PASSWORD_DEFAULT);
+```

@@ -8,7 +8,6 @@
 - [[#Check connection errors|Check connection errors]]
 	- [[#Check connection errors#1- `if($con)`|1- `if($con)`]]
 	- [[#Check connection errors#2- if (mysqli_connect_errno())|2- if (mysqli_connect_errno())]]
-	- [[#Check connection errors#3- `if($con -> connect_error`|3- `if($con -> connect_error`]]
 - [[#Query the Database|Query the Database]]
 	- [[#Query the Database#1- mysqli_query()|1- mysqli_query()]]
 	- [[#Query the Database#2- `$con -> query($query);`|2- `$con -> query($query);`]]
@@ -22,6 +21,9 @@
 - [[#Delete|Delete]]
 - [[#Sanitizing input #PHP_SQLi|Sanitizing input #PHP_SQLi]]
 - [[#Hashing the password|Hashing the password]]
+
+
+
 ---
 ---
 # Databases
@@ -52,7 +54,7 @@ if($connection){
 	echo "connected successfully :)";
 }
 else{
-	echo "Database Connection Error :(";
+	echo "Database Connection Error :( " . $conn->connect_error;
 }
 ```
 
@@ -64,11 +66,7 @@ if (mysqli_connect_errno()) { // errno -> error Number (0 if no errors)
 }
 ```
 
-### 3- `if($con -> connect_error`
-```php
-if ($con -> connect_error) {  
-  die("Connection failed: " . $conn->connect_error);  
-}
+
 ```
 ---
 ## Query the Database 

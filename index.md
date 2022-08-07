@@ -7,7 +7,7 @@
 ## [Cookies](Notes/cookies🍪.md)       --------------->      [Cookies mind map](Notes/cookies_mindmap.html)
 ## [Sessions](Notes/session.md)        --------------->            [Sessions mind map](Notes/session_mindmap.html)
 ## [Validation](Notes/Validation.md)  --------------->  [Validation mind map](Notes/validation_mindmap.html)
-
+## [Various Notes](various.md)
 ---
 # Projects <a name='projects'></a>
 ## CMS
